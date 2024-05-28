@@ -1,32 +1,35 @@
-from flask import Flask, request, jsonify
+import streamlit as st
 import numpy as np
 import joblib
 
 # Load the trained model
 model = joblib.load('isolation_forest_model.pkl')
 
-app = Flask(__name__)
+# Streamlit app
+st.title("Credit Card Fraud Detection Model")
+st.write("Enter the following features to check if the transaction is legitimate or fraudulent:")
 
-@app.route('/')
-def home():
-    return "Credit Card Fraud Detection Model"
+# Create input fields for user to enter feature values
+feature_names = [f'V{i}' for i in range(1, 29)]
+input_features = []
+for feature in feature_names:
+    value = st.text_input(f'Enter {feature}', '0')  # default value set to '0'
+    input_features.append(value)
 
-@app.route('/predict', methods=['POST'])
-def predict():
+# Create a button to submit input and get prediction
+if st.button("Submit"):
     try:
-        # Get JSON data from the request
-        data = request.json
-        # Extract features from the JSON data
-        features = np.array(data['features']).reshape(1, -1)
+        # Get input feature values and convert to float
+        features = np.array(input_features, dtype=np.float64).reshape(1, -1)
+        
         # Make prediction
         prediction = model.predict(features)
-        # Return result as JSON
-        result = {
-            'prediction': 'Legitimate transaction' if prediction[0] == 1 else 'Fraudulent transaction'
-        }
-        return jsonify(result)
-    except Exception as e:
-        return jsonify({'error': str(e)})
+        
+        # Display result
+        if prediction[0] == 1:
+            st.write("Legitimate transaction")
+        else:
+            st.write("Fraudulent transaction")
+    except ValueError as e:
+        st.write("Please enter valid numerical values for all features.")
 
-if __name__ == '__main__':
-    app.run(debug=True)
