@@ -96,4 +96,4 @@ Create input fields for each transaction feature (V1 to V28) using st.number_inp
 Add a submit button that triggers the prediction when clicked. Convert the user input into a DataFrame, make a prediction using the pre-trained model, and display the result.
 
 **6. Running the Streamlit Application** :
-Execute the streamlit run command in the terminal to run the Streamlit application. Open a web browser and navigate to the local URL provided by Streamlit (usually http://localhost:8501) to interact with the application.
+Execute the streamlit run command in the terminal to run the Streamlit application. Open a web browser and navigate to the local URL provided by Streamlit to interact with the application.
