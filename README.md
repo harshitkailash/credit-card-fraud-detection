@@ -80,20 +80,20 @@ This documentation provides a comprehensive guide to deploying a pre-trained Iso
 
 The provided code defines and runs a Streamlit application with functionalities for user input, prediction, and result display.
 
-**1. Importing Libraries**
+**1. Importing Libraries** : 
 The necessary libraries for the application include Streamlit for the web interface, pandas for data manipulation, and pickle for loading the pre-trained model.
 
-**2. Loading the Pre-trained Model**
+**2. Loading the Pre-trained Model** :
 Load the pre-trained Isolation Forest model from a pickle file.
 
-**3. Defining the Streamlit Application**
+**3. Defining the Streamlit Application** :
 Define the main function that sets up the Streamlit application.
 
-**4. Creating Input Fields**
+**4. Creating Input Fields** :
 Create input fields for each transaction feature (V1 to V28) using st.number_input. This allows users to enter feature values.
 
-**5. Submit Button and Prediction**
+**5. Submit Button and Prediction** :
 Add a submit button that triggers the prediction when clicked. Convert the user input into a DataFrame, make a prediction using the pre-trained model, and display the result.
 
-**6. Running the Streamlit Application**
+**6. Running the Streamlit Application** :
 Execute the streamlit run command in the terminal to run the Streamlit application. Open a web browser and navigate to the local URL provided by Streamlit (usually http://localhost:8501) to interact with the application.
