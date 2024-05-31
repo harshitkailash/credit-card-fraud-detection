@@ -52,23 +52,23 @@ We initialized the Isolation Forest and Local Outlier Factor models with appropr
 
 **Model Evaluation**
 
-For Local Outlier Factor, we used fit_predict to train the model and predict outliers in one step.
+1. For Local Outlier Factor, we used fit_predict to train the model and predict outliers in one step.
 
-For Isolation Forest, we used fit to train the model and predict to predict outliers.
+2. For Isolation Forest, we used fit to train the model and predict to predict outliers.
 
-We convert the prediction results to 0 for valid transactions and 1 for fraudulent transactions.
+3. We convert the prediction results to 0 for valid transactions and 1 for fraudulent transactions.
 
-We calculate and print the number of errors, accuracy score, and classification report for each model.
+4. We calculate and print the number of errors, accuracy score, and classification report for each model.
 
 **Obervations**
 
-Isolation Forest detected 689 errors versus Local Outlier Factor detecting 935 errors.
+1. Isolation Forest detected 689 errors versus Local Outlier Factor detecting 935 errors.
 
-Isolation Forest has a 99.75 % more accurate than LOF of 99.67 %.
+2. Isolation Forest has a 99.75 % more accurate than LOF of 99.67 %.
 
-When comparing error precision & recall for 2 models , the Isolation Forest performed much better than the LOF as we can see that the detection of fraud cases is around 27 % versus LOF detection rate of just 2 %.
+3. When comparing error precision & recall for 2 models , the Isolation Forest performed much better than the LOF as we can see that the detection of fraud cases is around 27 % versus LOF detection rate of just 2 %.
 
-So overall Isolation Forest Method performed much better in determining the fraud cases which is around 30%.
+4. So overall Isolation Forest Method performed much better in determining the fraud cases which is around 30%.
 
 # Application for Credit Card Fraud Detection
 
