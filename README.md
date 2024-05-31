@@ -69,3 +69,31 @@ Isolation Forest has a 99.75 % more accurate than LOF of 99.67 %.
 When comparing error precision & recall for 2 models , the Isolation Forest performed much better than the LOF as we can see that the detection of fraud cases is around 27 % versus LOF detection rate of just 2 %.
 
 So overall Isolation Forest Method performed much better in determining the fraud cases which is around 30%.
+
+# Application for Credit Card Fraud Detection
+
+## Introduction
+
+This documentation provides a comprehensive guide to deploying a pre-trained Isolation Forest model using Streamlit for credit card fraud detection. The application allows users to input transaction features and get real-time predictions on whether the transaction is legitimate or fraudulent.
+
+## Code Explanation
+
+The provided code defines and runs a Streamlit application with functionalities for user input, prediction, and result display.
+
+**1. Importing Libraries**
+The necessary libraries for the application include Streamlit for the web interface, pandas for data manipulation, and pickle for loading the pre-trained model.
+
+**2. Loading the Pre-trained Model**
+Load the pre-trained Isolation Forest model from a pickle file.
+
+**3. Defining the Streamlit Application**
+Define the main function that sets up the Streamlit application.
+
+**4. Creating Input Fields**
+Create input fields for each transaction feature (V1 to V28) using st.number_input. This allows users to enter feature values.
+
+**5. Submit Button and Prediction**
+Add a submit button that triggers the prediction when clicked. Convert the user input into a DataFrame, make a prediction using the pre-trained model, and display the result.
+
+**6. Running the Streamlit Application**
+Execute the streamlit run command in the terminal to run the Streamlit application. Open a web browser and navigate to the local URL provided by Streamlit (usually http://localhost:8501) to interact with the application.
