@@ -42,5 +42,23 @@ The LOF algorithm is an unsupervised outlier detection method which computes the
 
 The number of neighbors considered, (parameter n_neighbors) is typically chosen 1) greater than the minimum number of objects a cluster has to contain, so that other objects can be local outliers relative to this cluster, and 2) smaller than the maximum number of close by objects that can potentially be local outliers. In practice, such informations are generally not available, and taking n_neighbors=20 appears to work well in general.
 
+**Model Initialization :**
+
+We defined the contamination fraction based on the proportion of fraudulent transactions.
+
+We initialized the Isolation Forest and Local Outlier Factor models with appropriate parameters.
+
 ## Step 3: Model Evaluation and Observations
+
+**Model Evaluation**
+
+For Local Outlier Factor, we used fit_predict to train the model and predict outliers in one step.
+
+For Isolation Forest, we used fit to train the model and predict to predict outliers.
+
+We convert the prediction results to 0 for valid transactions and 1 for fraudulent transactions.
+
+We calculate and print the number of errors, accuracy score, and classification report for each model.
+
+**Obervations**
 
