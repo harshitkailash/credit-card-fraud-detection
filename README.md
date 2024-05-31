@@ -64,6 +64,8 @@ We calculate and print the number of errors, accuracy score, and classification 
 
 Isolation Forest detected 689 errors versus Local Outlier Factor detecting 935 errors.
 
-Isolation Forest has a 99.74% more accurate than LOF of 99.65%
-When comparing error precision & recall for 3 models , the Isolation Forest performed much better than the LOF as we can see that the detection of fraud cases is around 27 % versus LOF detection rate of just 2 % and SVM of 0%.
+Isolation Forest has a 99.75 % more accurate than LOF of 99.67 %.
+
+When comparing error precision & recall for 2 models , the Isolation Forest performed much better than the LOF as we can see that the detection of fraud cases is around 27 % versus LOF detection rate of just 2 %.
+
 So overall Isolation Forest Method performed much better in determining the fraud cases which is around 30%.
